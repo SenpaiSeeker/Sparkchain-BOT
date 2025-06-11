@@ -9,7 +9,7 @@ while true; do
         rm -f "$PID_FILE"
     fi
 
-    curl -sL https://raw.githubusercontent.com/SenpaiSeeker/tools/refs/heads/main/api-proxy.sh | bash -s proxy.txt https://api.sparkchain.ai
+    curl -sL https://raw.githubusercontent.com/SenpaiSeeker/tools/refs/heads/main/api-proxy.sh | bash -s proxy.txt
 
     total_count=$(wc -l < proxy.txt)
     echo -e "2\n$total_count" | python3 bot.py &
